@@ -99,12 +99,12 @@ exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec_always xrandr --output XWAYLAND0 --primary
 
 ### Output configuration
+# Manually setting resolution like this kills performance for some reason
 # Wallpaper
-output eDP-1 {
-	resolution 1920x1080 position 1920,0
-}
+# output eDP-1 {
+# 	resolution 1920x1080 position 1920,0
+# }
 output * {
-	bg #000000 solid_color
 	bg $background fill #000000
 }
 #
