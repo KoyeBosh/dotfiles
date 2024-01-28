@@ -1,0 +1,6 @@
+export QT_QPA_PLATFORM="wayland;xcb"
+export QT_QPA_PLATFORMTHEME="qt6ct"
+export QT_AUTO_SCREEN_SCALE_FACTOR=0.8
+export CLUTTER_BACKEND="wayland"
+export _JAVA_AWT_WM_NONREPARENTING=1
+export XDG_SESSION_TYPE="wayland"
