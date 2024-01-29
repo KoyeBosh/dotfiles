@@ -102,6 +102,7 @@ exec_always xrandr --output XWAYLAND0 --primary
 output eDP-1 {
 	mode 1920x1080@60Hz
 	scale 1
+	max_render_time 4
 }
 # Wallpaper
 output * {
