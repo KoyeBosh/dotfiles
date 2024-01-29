@@ -17,12 +17,13 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
 	{'nvim-telescope/telescope.nvim', tag = '0.1.5', dependencies = { 'nvim-lua/plenary.nvim' }},
-	{ "rose-pine/neovim", name = "rose-pine" },
+	--{ "rose-pine/neovim", name = "rose-pine" },
 	{"nvim-treesitter/nvim-treesitter", build = ":TSUpdate"},
-	{"nyoom-engineering/oxocarbon.nvim"},
+	--{"nyoom-engineering/oxocarbon.nvim"},
 	{"dracula/vim", name = "dracula"},
-	{"cormacrelf/vim-colors-github", name = "GitHub Color Scheme"},
+	--{"cormacrelf/vim-colors-github", name = "GitHub Color Scheme"},
 	{"neovim/nvim-lspconfig"},
+	{"navarasu/onedark.nvim"},
 	{'nvim-lualine/lualine.nvim', dependencies = { 'nvim-tree/nvim-web-devicons' }},
 }) 
 
