@@ -35,8 +35,8 @@
     dir                     # current directory
     vcs                     # git status
 	#example
-	newline
-    prompt_char           # prompt symbol
+	#newline
+    #prompt_char           # prompt symbol
   )
   
   ZLE_RPROMPT_INDENT=0
