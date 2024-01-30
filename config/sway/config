@@ -86,6 +86,7 @@ set $lock swaylock \
 	--text-ver "" \
 	--text-color ffffff \
 	--text-wrong-color ffffff \
+	--hide-keyboard-layout \
 	--disable-caps-lock-text
 
 #
