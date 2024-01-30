@@ -128,7 +128,13 @@ input type:touchpad {
 }
 input type:keyboard {
     xkb_numlock enabled
+	xkb_layout us,us
+	xkb_variant ,dvorak
+	xkb_options "grp:win_space_toggle"
 }
+#Eat the input
+bindsym $mod+Space :3
+
 input type:pointer {
     accel_profile "flat"
 }
@@ -281,7 +287,7 @@ for_window {
     bindsym $mod+v floating toggle
 
     # Swap focus between the tiling area and the floating area
-    bindsym $mod+space focus mode_toggle
+    #bindsym $mod+space focus mode_toggle
 
     # Move focus to the parent container
     bindsym $mod+a focus parent
