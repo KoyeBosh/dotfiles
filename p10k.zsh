@@ -32,8 +32,9 @@
   # The list of segments shown on the left. Fill it with the most important segments.
   typeset -g POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(
     os_icon                 # os identifier
-    dir                     # current directory
     vcs                     # git status
+    dir                     # current directory
+	newline
     # prompt_char           # prompt symbol
   )
 
@@ -135,13 +136,13 @@
 
   # Connect left prompt lines with these symbols. You'll probably want to use the same color
   # as POWERLEVEL9K_MULTILINE_FIRST_PROMPT_GAP_FOREGROUND below.
-  typeset -g POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX='%242F╭─'
-  typeset -g POWERLEVEL9K_MULTILINE_NEWLINE_PROMPT_PREFIX='%242F├─'
-  typeset -g POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX='%242F╰─'
+  #typeset -g POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX='%242F╭─'
+  #typeset -g POWERLEVEL9K_MULTILINE_NEWLINE_PROMPT_PREFIX='%242F├─'
+  #typeset -g POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX='%242F╰─'
   # Connect right prompt lines with these symbols.
-  typeset -g POWERLEVEL9K_MULTILINE_FIRST_PROMPT_SUFFIX='%242F─╮'
-  typeset -g POWERLEVEL9K_MULTILINE_NEWLINE_PROMPT_SUFFIX='%242F─┤'
-  typeset -g POWERLEVEL9K_MULTILINE_LAST_PROMPT_SUFFIX='%242F─╯'
+  #typeset -g POWERLEVEL9K_MULTILINE_FIRST_PROMPT_SUFFIX='%242F─╮'
+  #typeset -g POWERLEVEL9K_MULTILINE_NEWLINE_PROMPT_SUFFIX='%242F─┤'
+  #typeset -g POWERLEVEL9K_MULTILINE_LAST_PROMPT_SUFFIX='%242F─╯'
 
   # Filler between left and right prompt on the first prompt line. You can set it to ' ', '·' or
   # '─'. The last two make it easier to see the alignment between left and right prompt and to
@@ -185,7 +186,7 @@
   #################################[ os_icon: os identifier ]##################################
   # OS identifier color.
   typeset -g POWERLEVEL9K_OS_ICON_FOREGROUND=0
-  typeset -g POWERLEVEL9K_OS_ICON_BACKGROUND=2
+  typeset -g POWERLEVEL9K_OS_ICON_BACKGROUND=4
   # Custom icon.
   # typeset -g POWERLEVEL9K_OS_ICON_CONTENT_EXPANSION='⭐'
 
@@ -353,14 +354,16 @@
 
   #####################################[ vcs: git status ]######################################
   # Version control background colors.
-  typeset -g POWERLEVEL9K_VCS_CLEAN_BACKGROUND=2
-  typeset -g POWERLEVEL9K_VCS_MODIFIED_BACKGROUND=3
-  typeset -g POWERLEVEL9K_VCS_UNTRACKED_BACKGROUND=2
-  typeset -g POWERLEVEL9K_VCS_CONFLICTED_BACKGROUND=3
+  typeset -g POWERLEVEL9K_VCS_CLEAN_BACKGROUND=8
+  typeset -g POWERLEVEL9K_VCS_MODIFIED_BACKGROUND=8
+  typeset -g POWERLEVEL9K_VCS_UNTRACKED_BACKGROUND=8
+  typeset -g POWERLEVEL9K_VCS_CONFLICTED_BACKGROUND=8
   typeset -g POWERLEVEL9K_VCS_LOADING_BACKGROUND=8
+  typeset -g POWERLEVEL9K_VCS_VISUAL_IDENTIFIER_COLOR=7
+  typeset -g POWERLEVEL9K_VCS_FOREGROUND=7
 
   # Branch icon. Set this parameter to '\UE0A0 ' for the popular Powerline branch icon.
-  typeset -g POWERLEVEL9K_VCS_BRANCH_ICON='\uF126 '
+  typeset -g POWERLEVEL9K_VCS_BRANCH_ICON='\UE0A0 ' #'\uF126 '
 
   # Untracked files icon. It's really a question mark, your font isn't broken.
   # Change the value of this parameter to show a different icon.
@@ -385,11 +388,11 @@
     fi
 
     # Styling for different parts of Git status.
-    local       meta='%7F' # white foreground
-    local      clean='%0F' # black foreground
-    local   modified='%0F' # black foreground
-    local  untracked='%0F' # black foreground
-    local conflicted='%1F' # red foreground
+    local       meta='%7f' # white foreground
+    local      clean='%7f' # black foreground
+    local   modified='%7f' # black foreground
+    local  untracked='%7f' # black foreground
+    local conflicted='%7f' # red foreground
 
     local res
 
@@ -546,7 +549,7 @@
   ###################[ command_execution_time: duration of the last command ]###################
   # Execution time color.
   typeset -g POWERLEVEL9K_COMMAND_EXECUTION_TIME_FOREGROUND=0
-  typeset -g POWERLEVEL9K_COMMAND_EXECUTION_TIME_BACKGROUND=2
+  typeset -g POWERLEVEL9K_COMMAND_EXECUTION_TIME_BACKGROUND=4
   # Show duration of the last command if takes at least this many seconds.
   typeset -g POWERLEVEL9K_COMMAND_EXECUTION_TIME_THRESHOLD=1
   # Show this many fractional digits. Zero means round to seconds.
@@ -825,17 +828,18 @@
   # Foreground color.
   typeset -g POWERLEVEL9K_VI_MODE_FOREGROUND=0
   # Text and color for normal (a.k.a. command) vi mode.
-  typeset -g POWERLEVEL9K_VI_COMMAND_MODE_STRING=NORMAL
+  typeset -g POWERLEVEL9K_VI_COMMAND_MODE_STRING="%BNORMAL$b"
   typeset -g POWERLEVEL9K_VI_MODE_NORMAL_BACKGROUND=2
   # Text and color for visual vi mode.
-  typeset -g POWERLEVEL9K_VI_VISUAL_MODE_STRING=VISUAL
-  typeset -g POWERLEVEL9K_VI_MODE_VISUAL_BACKGROUND=3
+  typeset -g POWERLEVEL9K_VI_VISUAL_MODE_STRING="%BVISUAL%b"
+  typeset -g POWERLEVEL9K_VI_MODE_VISUAL_BACKGROUND="#c678dd"
   # Text and color for overtype (a.k.a. overwrite and replace) vi mode.
-  typeset -g POWERLEVEL9K_VI_OVERWRITE_MODE_STRING=OVERTYPE
+  typeset -g POWERLEVEL9K_VI_OVERWRITE_MODE_STRING="%BREPLACE%b"
   typeset -g POWERLEVEL9K_VI_MODE_OVERWRITE_BACKGROUND=1
   # Text and color for insert vi mode.
-  typeset -g POWERLEVEL9K_VI_INSERT_MODE_STRING=
-  typeset -g POWERLEVEL9K_VI_MODE_INSERT_FOREGROUND=8
+  typeset -g POWERLEVEL9K_VI_INSERT_MODE_STRING="%BINSERT%b"
+  typeset -g POWERLEVEL9K_VI_MODE_INSERT_FOREGROUND=0
+  typeset -g POWERLEVEL9K_VI_MODE_INSERT_BACKGROUND=4
 
   ######################################[ ram: free RAM ]#######################################
   # RAM color.
@@ -1806,7 +1810,7 @@
   #   - verbose: Enable instant prompt and print a warning when detecting console output during
   #              zsh initialization. Choose this if you've never tried instant prompt, haven't
   #              seen the warning, or if you are unsure what this all means.
-  typeset -g POWERLEVEL9K_INSTANT_PROMPT=verbose
+  typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
 
   # Hot reload allows you to change POWERLEVEL9K options after Powerlevel10k has been initialized.
   # For example, you can type POWERLEVEL9K_BACKGROUND=red and see your prompt turn red. Hot reload
