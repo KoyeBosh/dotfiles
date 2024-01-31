@@ -64,7 +64,7 @@ set $ss wl-copy < $(grimshot --notify save area $ss-save)
 set $ss-wait wl-copy < $(grimshot --notify --wait 5 save area $ss-save)
 set $ss-screen wl-copy < $(grimshot --notify save screen $ss-save)
 # Swaylock
-set $lock swaylock \
+set $lock 'swaylock \
 	--indicator-idle-visible \
 	--clock \
 	--font JetBrainsMonoNerdFontMono \
@@ -90,12 +90,13 @@ set $lock swaylock \
 	--text-color $cl_white \
 	--text-wrong-color $cl_white \
 	--hide-keyboard-layout \
-	--disable-caps-lock-text
+	--disable-caps-lock-text \
+	--image $background'
 
 #
 # Autostart
 #
-exec $lock --image $background
+exec $lock
 
 # Services
 exec wl-paste --watch cliphist store
@@ -118,9 +119,9 @@ output * {
 
 ### Idle configuration
 exec swayidle -w \
-	timeout 300 'swaylock -f -c 000000' \
+	timeout 300 $lock \
 	timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
-	before-sleep '$lock'
+	before-sleep $lock
 
 ### Input configuration
 
@@ -204,7 +205,7 @@ for_window {
     bindsym $mod+q exec $calc
 
     # Lock the screen
-    bindsym $mod+m exec $lock --image $background
+    bindsym $mod+m exec $lock
 
     # Take screenshots
     bindsym $mod+shift+s exec $ss
