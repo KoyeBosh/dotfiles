@@ -33,9 +33,20 @@ window#waybar.empty {
 window#waybar.solo {
     background-color: #000000;
 }
-
 window#waybar.foot {
     background-color: @term;
+}
+window#waybar.firefox {
+	background-color: #1c1b22;
+}
+window#waybar.discord {
+	background-color: #1e1f22;
+}
+window#waybar.steamwebhelper {
+	background-color: #171d25;
+}
+window#waybar.spotify {
+	background-color: #000000;
 }
 
 button {

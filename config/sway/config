@@ -11,7 +11,7 @@ default_border pixel 4
 default_floating_border pixel 4
 
 ### SwayFX settings ###
-#corner_radius 8
+corner_radius 8
 #layer_effects "waybar" blur enable
 #blur enable
 #blur_xray enable
@@ -106,7 +106,7 @@ exec_always xrandr --output XWAYLAND0 --primary
 output eDP-1 {
 	mode 1920x1080@60Hz
 	scale 1
-	max_render_time 4
+	max_render_time 10
 }
 # Wallpaper
 output * {
