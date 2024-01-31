@@ -23,7 +23,7 @@ default_floating_border pixel 4
 set $cl_high #61afef
 #set $cl_high #fe4836
 set $cl_fore #ffffff
-set $cl_back #000000
+set $cl_back #21252b
 set $cl_urge #e06c75
 #set $cl_urge #00776c
 #set $cl_urge #fc034e
