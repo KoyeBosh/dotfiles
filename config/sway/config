@@ -20,19 +20,20 @@ default_floating_border pixel 4
 
 ### Colors ###
 #set $cl_high #fc034e
-set $cl_high #61afef
 #set $cl_high #fe4836
-set $cl_fore #ffffff
-set $cl_back #21252b
-set $cl_urge #e06c75
 #set $cl_urge #00776c
 #set $cl_urge #fc034e
+set $cl_white ffffff
+set $cl_high 61afef
+set $cl_fore 282c34
+set $cl_back 21252b
+set $cl_urge e06c75
 
-# Colors                border   bg       text     indicate childborder
-client.focused          $cl_high $cl_high $cl_fore $cl_high $cl_high
-client.focused_inactive $cl_back $cl_back $cl_fore $cl_back $cl_back
-client.unfocused        $cl_back $cl_back $cl_fore $cl_back $cl_back
-client.urgent           $cl_urge $cl_urge $cl_fore $cl_urge $cl_urge
+# Colors                border    bg        text      indicate  childborder
+client.focused          #$cl_high #$cl_high #$cl_fore #$cl_high #$cl_high
+client.focused_inactive #$cl_back #$cl_back #$cl_fore #$cl_back #$cl_back
+client.unfocused        #$cl_back #$cl_back #$cl_fore #$cl_back #$cl_back
+client.urgent           #$cl_urge #$cl_urge #$cl_fore #$cl_urge #$cl_urge
 
 ### Keys ###
 set $mod Mod4
@@ -72,11 +73,11 @@ set $lock swaylock \
 	--effect-vignette 0.7:0 \
 	--indicator-radius 400 \
 	--indicator-thickness 20 \
-	--key-hl-color ffffff88 \
+	--key-hl-color $cl_white \
 	--separator-color 00000000 \
-	--ring-color fe4836 \
+	--ring-color $cl_high \
 	--ring-ver-color 00000000 \
-	--ring-wrong-color fe4836 \
+	--ring-wrong-color $cl_urge \
 	--line-color 00000000 \
 	--line-wrong-color 00000000 \
 	--line-ver-color 00000000 \
@@ -86,8 +87,8 @@ set $lock swaylock \
 	--inside-ver-color 00000000 \
 	--text-wrong "Incorrect" \
 	--text-ver "" \
-	--text-color ffffff \
-	--text-wrong-color ffffff \
+	--text-color $cl_white \
+	--text-wrong-color $cl_white \
 	--hide-keyboard-layout \
 	--disable-caps-lock-text
 
