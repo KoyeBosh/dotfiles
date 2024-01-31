@@ -1,3 +1,11 @@
+@define-color high #61afef; 
+@define-color alt #98c379;
+@define-color alert #e06c75;
+@define-color term #282c34;
+@define-color text-dark #21252b;
+@define-color text-high #abb2bf;
+@define-color dark #21252b;
+
 * {
     /* `otf-font-awesome` is required to be installed for icons */
     font-family: JetBrainsMonoNerdFont, FontAwesome, Roboto, Helvetica, Arial, sans-serif;
@@ -5,9 +13,9 @@
 }
 
 window#waybar {
-    background-color: rgba(16, 16, 16, 0.65);
+    background-color: @dark;
     /* border-bottom: 3px solid rgba(100, 114, 125, 0.5); */
-    color: #ffffff;
+    color: @text-high;
     transition-property: background-color;
     transition-duration: .5s;
 }
@@ -21,20 +29,14 @@ window#waybar.empty {
     background-color: transparent;
 }
 */
+
 window#waybar.solo {
     background-color: #000000;
 }
 
-/*
-window#waybar.termite {
-    background-color: #3F3F3F;
+window#waybar.foot {
+    background-color: @term;
 }
-
-window#waybar.chromium {
-    background-color: #000000;
-    border: none;
-}
-*/
 
 button {
     /* Use box-shadow instead of border so the text isn't offset */
@@ -55,7 +57,7 @@ button:hover {
 #workspaces button {
     padding: 0 5px;
     background-color: transparent;
-    color: #ffffff;
+    color: @text-high;
 }
 
 #workspaces button:hover {
@@ -63,14 +65,16 @@ button:hover {
 }
 
 #workspaces button.focused {
-    background-color: #fe4836;
+    background-color: @high;
     font-weight: 900;
-    color: #ffffff;
+    color: @text-dark;
     /* box-shadow: inset 0 -3px #ffffff; */
 }
 
 #workspaces button.urgent {
-    background-color: #00776c;
+    background-color: @alert;
+	font-weight: 900;
+	color: @text-dark;
 }
 
 #mode {
@@ -95,9 +99,10 @@ button:hover {
 #scratchpad,
 #mpd {
     padding: 0 8px;
-    color: #ffffff;
+    color: @text-dark;
     border-radius: 6px;
     margin: 4px 2px;
+	font-weight: bold;
 }
 
 #window,
@@ -116,7 +121,7 @@ button:hover {
 }
 
 #clock {
-    background-color: #fe4836;
+    background-color: @high;
     font-weight: bold;
 }
 
@@ -126,13 +131,11 @@ button:hover {
 }
 
 #battery {
-    background-color: #00776c;
-    color: #ffffff;
+    background-color: @alt;
 }
 
 #battery.charging, #battery.plugged {
-    color: #ffffff;
-    background-color: #00776c;
+    background-color: @alt;
 }
 
 @keyframes blink {
@@ -170,21 +173,21 @@ label:focus {
 }
 
 #backlight {
-    background-color: #fe4836;
+    background-color: @high;
     font-weight: bold;
 }
 
 #network {
     /*background-color: #2980b9;*/
-    background-color: #00776c;
+    background-color: @alt;
 }
 
 #network.disconnected {
-    background-color: #00776c;
+    background-color: @alert;
 }
 
 #pulseaudio {
-    background-color: #fe4836;
+    background-color: @high;
     font-weight: bold;
 }
 
@@ -225,7 +228,7 @@ label:focus {
 }
 
 #tray {
-    background-color: #00776c;
+    background-color: @alt;
 }
 
 #tray > .passive {
@@ -262,8 +265,9 @@ label:focus {
 }
 
 #language {
-    background: #00776c;
-    color: #ffffff;
+    background: @alt;
+    color: @text-dark;
+	font-weight: bold;
     padding: 0 5px;
     margin: 4 2px;
     min-width: 16px;
@@ -288,7 +292,7 @@ label:focus {
 
 #scratchpad {
     /* background: rgba(0, 0, 0, 0.2); */
-    background: #00776c;
+    background: @alt;
     margin-left: 0px;
 }
 
