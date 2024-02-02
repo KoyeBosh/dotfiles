@@ -10,3 +10,5 @@ alias c='clear'
 alias vim='nvim'
 alias svim='sudoedit'
 alias man='batman'
+alias nf='neofetch'
+
