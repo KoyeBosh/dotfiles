@@ -48,6 +48,9 @@ window#waybar.steamwebhelper {
 window#waybar.spotify {
 	background-color: #000000;
 }
+window#waybar.chromium {
+	background-color: #353535;
+}
 
 button {
     /* Use box-shadow instead of border so the text isn't offset */
@@ -203,8 +206,8 @@ label:focus {
 }
 
 #pulseaudio.muted {
-    background-color: #bbbbbb;
-    color: #2a5c45;
+    background-color: @alert;
+    color: @text-dark;
 }
 
 #wireplumber {
@@ -252,11 +255,11 @@ label:focus {
 }
 
 #idle_inhibitor {
-    background-color: #00776c;
+    background-color: @high;
 }
 
 #idle_inhibitor.activated {
-    background-color: #00776c;
+    background-color: @alert;
 }
 
 #mpd {

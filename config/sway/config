@@ -26,13 +26,15 @@ corner_radius 8
 set $cl_white ffffff
 set $cl_high 61afef
 set $cl_fore 282c34
+#shown for inactive tabs text
+set $cl_gray 979eab
 set $cl_back 21252b
 set $cl_urge e06c75
 
 # Colors                border    bg        text      indicate  childborder
 client.focused          #$cl_high #$cl_high #$cl_fore #$cl_high #$cl_high
-client.focused_inactive #$cl_back #$cl_back #$cl_fore #$cl_back #$cl_back
-client.unfocused        #$cl_back #$cl_back #$cl_fore #$cl_back #$cl_back
+client.focused_inactive #$cl_back #$cl_back #$cl_high #$cl_back #$cl_back
+client.unfocused        #$cl_back #$cl_back #$cl_gray #$cl_back #$cl_back
 client.urgent           #$cl_urge #$cl_urge #$cl_fore #$cl_urge #$cl_urge
 
 ### Keys ###
@@ -57,6 +59,7 @@ set $emoji rofimoji --selector wofi
 set $power $config/powermenu.sh
 set $clipboard wtype -- $(cliphist list | wofi -S dmenu -P Paste | cliphist decode)
 set $calc gnome-calculator
+set $files nemo
 
 # Screenshots
 set $ss-save $screenshots/Screenshot-$(date "+%a-%b-%d-%T-%Z-%Y").png
@@ -89,6 +92,7 @@ set $lock 'swaylock \
 	--text-ver "" \
 	--text-color $cl_white \
 	--text-wrong-color $cl_white \
+	--bs-hl-color $cl_urge\
 	--hide-keyboard-layout \
 	--disable-caps-lock-text \
 	--image $background'
@@ -107,7 +111,7 @@ exec_always xrandr --output XWAYLAND0 --primary
 output eDP-1 {
 	mode 1920x1080@60Hz
 	scale 1
-	max_render_time 10
+	max_render_time 6
 }
 # Wallpaper
 output * {
@@ -173,6 +177,7 @@ for_window {
     [app_id="firefox"] $vid
 
     # Utilities
+    [app_id="nemo"] $float
     [app_id="pavucontrol"] $float
     [app_id="org.gnome.Calculator"] $float
 }
@@ -333,8 +338,6 @@ bindsym $mod+Shift+r mode "resizer
 #
 # Status Bar:
 #
-bar {
-    swaybar_command waybar
-}
+bar swaybar_command waybar
 
 include /etc/sway/config.d/*
