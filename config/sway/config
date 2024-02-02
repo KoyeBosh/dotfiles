@@ -11,7 +11,7 @@ default_border pixel 4
 default_floating_border pixel 4
 
 ### SwayFX settings ###
-corner_radius 8
+#corner_radius 8
 #layer_effects "waybar" blur enable
 #blur enable
 #blur_xray enable
@@ -19,17 +19,16 @@ corner_radius 8
 #shadows enable
 
 ### Colors ###
-#set $cl_high #fc034e
-#set $cl_high #fe4836
-#set $cl_urge #00776c
-#set $cl_urge #fc034e
+# Window Colors
 set $cl_white ffffff
 set $cl_high 61afef
 set $cl_fore 282c34
-#shown for inactive tabs text
 set $cl_gray 979eab
 set $cl_back 21252b
 set $cl_urge e06c75
+# Other Colors
+set $cl_inside 000000aa
+set $cl_alt 98c379
 
 # Colors                border    bg        text      indicate  childborder
 client.focused          #$cl_high #$cl_high #$cl_fore #$cl_high #$cl_high
@@ -79,19 +78,22 @@ set $lock 'swaylock \
 	--key-hl-color $cl_white \
 	--separator-color 00000000 \
 	--ring-color $cl_high \
-	--ring-ver-color 00000000 \
+	--ring-ver-color $cl_alt \
 	--ring-wrong-color $cl_urge \
+	--ring-clear-color $cl_alt \
 	--line-color 00000000 \
 	--line-wrong-color 00000000 \
 	--line-ver-color 00000000 \
 	--line-clear-color 00000000 \
-	--inside-color 000000aa \
-	--inside-wrong-color 000000aa \
-	--inside-ver-color 00000000 \
+	--inside-color $cl_inside \
+	--inside-wrong-color $cl_inside \
+	--inside-ver-color $cl_inside \
+	--inside-clear-color $cl_inside \
 	--text-wrong "Incorrect" \
 	--text-ver "" \
 	--text-color $cl_white \
 	--text-wrong-color $cl_white \
+	--text-clear-color $cl_white \
 	--bs-hl-color $cl_urge\
 	--hide-keyboard-layout \
 	--disable-caps-lock-text \
@@ -111,7 +113,7 @@ exec_always xrandr --output XWAYLAND0 --primary
 output eDP-1 {
 	mode 1920x1080@60Hz
 	scale 1
-	max_render_time 6
+	max_render_time 10
 }
 # Wallpaper
 output * {
@@ -333,7 +335,7 @@ mode "resize" {
     bindsym Return mode "default"
     bindsym Escape mode "default"
 }
-bindsym $mod+Shift+r mode "resizer
+bindsym $mod+Shift+r mode "resize"
 
 #
 # Status Bar:
