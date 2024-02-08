@@ -2,8 +2,8 @@
 # Dependencies: autotiling (i3 plugin), waybar, wofi, rofimoji, wtype, cliphist, grimshot, dunst, swaylock-effects
 
 exec autotiling
-gaps inner 6
-gaps outer 2
+#gaps inner 6
+#gaps outer 2
 smart_gaps on
 smart_borders on
 hide_edge_borders smart
@@ -113,7 +113,7 @@ exec_always xrandr --output XWAYLAND0 --primary
 output eDP-1 {
 	mode 1920x1080@60Hz
 	scale 1
-	max_render_time 10
+	max_render_time 6
 }
 # Wallpaper
 output * {
