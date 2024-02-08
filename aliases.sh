@@ -1,5 +1,5 @@
 # Color output
-alias ls='exa --color=auto'
+alias ls='eza --color=auto'
 alias grep='grep --color=auto'
 alias ip='ip -color=auto'
 
