@@ -39,5 +39,8 @@ return {
 		require'lspconfig'.texlab.setup{
 			capabilities = capabilities
 		}
+		require'lspconfig'.jdtls.setup{
+			capabilities = capabilities
+		}
 	end
 }

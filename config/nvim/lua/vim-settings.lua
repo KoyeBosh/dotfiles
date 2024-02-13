@@ -1,6 +1,9 @@
 vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>ee", vim.cmd.Ex)
 
+-- System clipboard
+vim.opt.clipboard = "unnamedplus"
+
 vim.opt.nu = true
 vim.opt.relativenumber = true
 
