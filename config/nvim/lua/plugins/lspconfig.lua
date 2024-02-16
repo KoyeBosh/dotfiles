@@ -42,6 +42,9 @@ return {
 		require 'lspconfig'.jdtls.setup {
 			capabilities = capabilities
 		}
+		require 'lspconfig'.ccls.setup {
+			capabilities = capabilities
+		}
 
 		-- Global mappings.
 		-- See `:help vim.diagnostic.*` for documentation on any of the below functions
