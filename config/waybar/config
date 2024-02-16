@@ -9,22 +9,21 @@
     // "modules-center": ["sway/window"],
     "modules-right": ["idle_inhibitor", "sway/language", "pulseaudio", "network", "backlight", "battery", "clock", "tray"],
     // Modules configuration
-    // "sway/workspaces": {
-    //     "disable-scroll": true,
-    //     "all-outputs": true,
-    //     "warp-on-scroll": false,
-    //     "format": "{name}: {icon}",
-    //     "format-icons": {
-    //         "1": "",
-    //         "2": "",
-    //         "3": "",
-    //         "4": "",
-    //         "5": "",
-    //         "urgent": "",
-    //         "focused": "",
-    //         "default": ""
-    //     }
-    // },
+    "sway/workspaces": {
+        "all-outputs": true,
+        //"warp-on-scroll": false,
+		"enable-bar-scroll": true,
+        // "format": "{name} {icon} ",
+        //"format-icons": {
+        //    "1": "󰈹",
+        //    "2": "",
+        //    "3": "",
+        //    "10": "",
+        //    "urgent": "",
+        //    "focused": "",
+        //    "default": ""
+        //}
+    },
     "keyboard-state": {
         "numlock": true,
         "capslock": true,
@@ -82,7 +81,8 @@
     },
     "tray": {
         // "icon-size": 21,
-        "spacing": 10
+        "spacing": 10,
+		"reverse-direction": true
     },
     "clock": {
         // "timezone": "America/New_York",

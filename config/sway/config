@@ -2,6 +2,7 @@
 # Dependencies: autotiling (i3 plugin), waybar, wofi, rofimoji, wtype, cliphist, grimshot, dunst, swaylock-effects
 
 exec autotiling
+exec nm-applet
 
 #gaps inner 6
 #gaps outer 2
