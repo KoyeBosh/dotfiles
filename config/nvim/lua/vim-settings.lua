@@ -2,6 +2,9 @@ vim.g.mapleader = " "
 local opts = { noremap = true, silent = true }
 vim.keymap.set("", "<Space>", "<Nop>", opts)
 
+-- Built-in spellchecker
+vim.opt.spell = true
+
 -- Vim file manager
 vim.keymap.set("n", "<leader>ee", vim.cmd.Ex, opts)
 
