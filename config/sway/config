@@ -355,6 +355,13 @@ bindsym XF86AudioNext exec playerctl next
 #
 # Status Bar:
 #
-bar swaybar_command waybar
+bar {
+	swaybar_command waybar
+	position top
+	# mode hide
+	# hidden_state hide
+	# modifier $mod
+}
+
 
 include /etc/sway/config.d/*

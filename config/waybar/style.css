@@ -54,6 +54,16 @@ window#waybar.spotify {
 window#waybar.obsidian {
 	background-color: #363636;
 }
+window#waybar.google-chrome {
+	background-color: #231c2f;
+}
+window#waybar.chromium {
+	background-color: #231c2f;
+}
+
+window {
+	border-radius: 0px;
+}
 
 button {
     /* Use box-shadow instead of border so the text isn't offset */
