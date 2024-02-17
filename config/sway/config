@@ -190,8 +190,9 @@ for_window {
 
 ### Key bindings
 #
-# Basics:
-#
+
+	bindgesture swipe:right workspace prev
+	bindgesture swipe:left workspace next
 
     # Pin a floating window (follows you to every workspace)
     bindsym $mod+p sticky toggle
