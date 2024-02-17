@@ -257,7 +257,7 @@ label:focus {
 }
 
 #idle_inhibitor {
-    background-color: @high;
+    background-color: @alt;
 }
 
 #idle_inhibitor.activated {
