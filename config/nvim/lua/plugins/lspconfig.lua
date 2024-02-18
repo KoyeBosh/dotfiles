@@ -42,7 +42,10 @@ return {
 		require 'lspconfig'.jdtls.setup {
 			capabilities = capabilities
 		}
-		require 'lspconfig'.ccls.setup {
+		require 'lspconfig'.clangd.setup {
+			capabilities = capabilities,
+		}
+		require 'lspconfig'.texlab.setup{
 			capabilities = capabilities
 		}
 
