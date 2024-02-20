@@ -5,4 +5,5 @@ export CLUTTER_BACKEND="wayland"
 export _JAVA_AWT_WM_NONREPARENTING=1
 export XDG_SESSION_TYPE="wayland"
 export ADW_DISABLE_PORTAL=1
+export ELECTRON_OZONE_PLATFORM_HINT="auto"
 
