@@ -16,6 +16,8 @@ vim.keymap.set("v", "<A-k>", ":m '<-2<CR>gv=gv", opts)
 
 -- System clipboard
 vim.opt.clipboard = "unnamedplus"
+-- Copy entire file
+vim.keymap.set("n", "<C-S-y>", "gg0yG<C-o>", opts)
 
 -- Line numbers
 vim.opt.nu = true
@@ -45,4 +47,9 @@ vim.opt.scrolloff = 8
 
 vim.opt.incsearch = true
 vim.opt.ignorecase = true --finally free!
+
+-- Neovide ✨
+vim.o.guifont = "JetBrainsMono Nerd Font:h10"
+vim.g.neovide_hide_mouse_when_typing = true
+vim.g.neovide_cursor_vfx_mode = "wireframe"
 

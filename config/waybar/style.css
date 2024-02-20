@@ -39,6 +39,9 @@ window#waybar.foot {
 window#waybar.footclient {
 	background-color: @term;
 }
+window#waybar.neovide {
+	background-color: @term;
+}
 window#waybar.firefox {
 	background-color: #1c1b22;
 }

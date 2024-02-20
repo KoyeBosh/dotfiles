@@ -5,7 +5,7 @@ return {
 			zsh = {"zsh"},
 			sh = {"zsh"},
 			text = {"languagetool","typos"},
-			tex = {"typos"},
+			tex = {"typos", "languagetool"},
 			markdown = {"typos"}
 		}
 		vim.api.nvim_create_autocmd({ "InsertLeave", "BufWritePost" }, {
