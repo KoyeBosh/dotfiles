@@ -51,5 +51,6 @@ vim.opt.ignorecase = true --finally free!
 -- Neovide ✨
 vim.o.guifont = "JetBrainsMono Nerd Font:h10"
 vim.g.neovide_hide_mouse_when_typing = true
-vim.g.neovide_cursor_vfx_mode = "wireframe"
+vim.g.neovide_cursor_animation_length = 0.04
+vim.g.neovide_cursor_unfocused_outline_width = 0.08
 
