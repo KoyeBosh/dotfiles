@@ -28,6 +28,8 @@ vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.smartindent = true
+vim.opt.textwidth = 80
+vim.opt.formatoptions = "jroqwant"
 
 -- Buffer switching
 vim.keymap.set("n", "H", vim.cmd.bprevious, opts)
