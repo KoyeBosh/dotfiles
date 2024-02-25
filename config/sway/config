@@ -68,42 +68,7 @@ set $ss wl-copy < $(grimshot --notify save area $ss-save)
 set $ss-wait wl-copy < $(grimshot --notify --wait 5 save area $ss-save)
 set $ss-screen wl-copy < $(grimshot --notify save screen $ss-save)
 # Swaylock
-set $lock 'swaylock \
-	--indicator-idle-visible \
-	--clock \
-	--font JetBrainsMonoNerdFontMono \
-	--timestr "%I:%M %p"\
-	--effect-blur 14x5 \
-	--effect-vignette 0.7:0 \
-	--indicator-radius 400 \
-	--indicator-thickness 20 \
-	--key-hl-color $cl_white \
-	--separator-color 00000000 \
-	--ring-color $cl_high \
-	--ring-ver-color $cl_alt \
-	--ring-wrong-color $cl_urge \
-	--ring-clear-color $cl_alt \
-	--line-color 00000000 \
-	--line-wrong-color 00000000 \
-	--line-ver-color 00000000 \
-	--line-clear-color 00000000 \
-	--inside-color $cl_inside \
-	--inside-wrong-color $cl_inside \
-	--inside-ver-color $cl_inside \
-	--inside-clear-color $cl_inside \
-	--text-wrong "Incorrect" \
-	--text-ver "" \
-	--text-color $cl_white \
-	--text-wrong-color $cl_white \
-	--text-clear-color $cl_white \
-	--bs-hl-color $cl_urge\
-	--hide-keyboard-layout \
-	--disable-caps-lock-text \
-	--image $background'
-
-#
-# Autostart
-#
+set $lock swaylock
 exec $lock
 
 # Services

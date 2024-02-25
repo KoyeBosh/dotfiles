@@ -17,19 +17,12 @@ window#waybar {
     /* border-bottom: 3px solid rgba(100, 114, 125, 0.5); */
     color: @text-high;
     transition-property: background-color;
-    /* transition-duration: .5s; */
+    transition-duration: .2s;
 }
 
-window#waybar.hidden {
-    opacity: 0.2;
+window#waybar.empty #window {
+	background-color: transparent;
 }
-
-/*
-window#waybar.empty {
-    background-color: transparent;
-}
-*/
-
 window#waybar.solo {
     background-color: #000000;
 }
@@ -63,6 +56,9 @@ window#waybar.google-chrome {
 window#waybar.chromium {
 	background-color: #231c2f;
 }
+window#waybar.jetbrains-idea-ce {
+	background-color: @dark;
+}
 
 window {
 	border-radius: 0px;
@@ -94,7 +90,7 @@ button:hover {
     background: rgba(0, 0, 0, 0.2);
 }
 
-#workspaces button.focused {
+#workspaces button.active {
     background-color: @high;
     font-weight: 900;
     color: @text-dark;
