@@ -2,8 +2,9 @@ vim.g.mapleader = " "
 local opts = { noremap = true, silent = true }
 vim.keymap.set("", "<Space>", "<Nop>", opts)
 
--- Built-in spellchecker
+-- General editing
 vim.opt.spell = true
+vim.keymap.set("i", "<C-BS>", "<C-w>", opts);
 
 -- Vim file manager
 vim.keymap.set("n", "<leader>ee", vim.cmd.Ex, opts)
@@ -22,6 +23,7 @@ vim.keymap.set("n", "<C-S-y>", "gg0yG<C-o>", opts)
 -- Line numbers
 vim.opt.nu = true
 vim.opt.relativenumber = true
+vim.opt.cursorline = true
 
 -- Tabs and spacing
 vim.opt.tabstop = 4
@@ -34,8 +36,8 @@ vim.opt.formatoptions = "jroqwant"
 -- Buffer switching
 vim.keymap.set("n", "H", vim.cmd.bprevious, opts)
 vim.keymap.set("n", "L", vim.cmd.bnext, opts)
-vim.keymap.set("n", "<leader>d", ":bd<CR>", opts)
-vim.keymap.set("n", "<leader>D", ":bd!<CR>", opts)
+vim.keymap.set("n", "<leader>t", ":bd<CR>", opts)
+vim.keymap.set("n", "<leader>T", ":bd!<CR>", opts)
 
 -- Stay in visual mode after indenting
 vim.keymap.set("v", "<", "<gv", opts)
@@ -49,6 +51,12 @@ vim.opt.scrolloff = 8
 
 vim.opt.incsearch = true
 vim.opt.ignorecase = true --finally free!
+
+-- nvim-dap debugger
+vim.keymap.set("n", "<leader>b", ":lua require'dap'.toggle_breakpoint()<CR>", opts)
+vim.keymap.set("n", "<leader>d", ":lua require'dap'.continue()<CR>", opts)
+vim.keymap.set("n", "<leader>i", ":lua require'dap'.step_into()<CR>", opts)
+vim.keymap.set("n", "<leader>n", ":lua require'dap'.step_over()<CR>", opts)
 
 -- Neovide ✨
 vim.o.guifont = "JetBrainsMono Nerd Font:h10"
