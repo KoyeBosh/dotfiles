@@ -3,7 +3,6 @@ local opts = { noremap = true, silent = true }
 vim.keymap.set("", "<Space>", "<Nop>", opts)
 
 -- General editing
-vim.opt.spell = true
 vim.keymap.set("i", "<C-BS>", "<C-w>", opts);
 
 -- Vim file manager
@@ -59,7 +58,7 @@ vim.keymap.set("n", "<leader>i", ":lua require'dap'.step_into()<CR>", opts)
 vim.keymap.set("n", "<leader>n", ":lua require'dap'.step_over()<CR>", opts)
 
 -- Neovide ✨
-vim.o.guifont = "JetBrainsMono Nerd Font:h10"
+vim.o.guifont = "JetBrainsMono Nerd Font:h11"
 vim.g.neovide_hide_mouse_when_typing = true
 vim.g.neovide_cursor_animation_length = 0.04
 vim.g.neovide_cursor_unfocused_outline_width = 0.08
