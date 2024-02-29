@@ -1,6 +1,6 @@
 if [[ -z $DISPLAY && $(tty) == /dev/tty1 && $XDG_SESSION_TYPE == tty ]]; then
   source $HOME/.wayland-env.sh
-  exec Hyprland > /dev/null
+  exec sway > /dev/null
 fi
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
