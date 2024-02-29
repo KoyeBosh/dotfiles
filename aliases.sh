@@ -3,9 +3,11 @@ alias ls='eza --color=auto'
 alias grep='grep --color=auto'
 alias ip='ip -color=auto'
 
+# Sway is my "no distractions" environment (and also doesn't support window 
+# swallowing)
 if [ $XDG_CURRENT_DESKTOP="sway" ]
 then
-	alias vim='neovide'
+	alias vim='nvim'
 else
 	alias vim='neovide --no-fork &> /dev/null'
 fi
