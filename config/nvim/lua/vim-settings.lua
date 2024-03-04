@@ -23,6 +23,7 @@ vim.keymap.set("n", "<C-S-y>", "gg0yG<C-o>", opts)
 vim.opt.nu = true
 vim.opt.relativenumber = true
 vim.opt.cursorline = true
+vim.opt.fillchars = {eob = " "}
 
 -- Tabs and spacing
 vim.opt.tabstop = 4
@@ -30,7 +31,7 @@ vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.smartindent = true
 vim.opt.textwidth = 80
-vim.opt.formatoptions = "jroqwant"
+vim.opt.formatoptions = "roqwnc"
 
 -- Buffer switching
 vim.keymap.set("n", "H", vim.cmd.bprevious, opts)
@@ -64,4 +65,5 @@ vim.g.neovide_cursor_animation_length = 0.04
 vim.g.neovide_cursor_unfocused_outline_width = 0.08
 vim.g.neovide_floating_shadow = true
 vim.g.neovide_scroll_animation_length = 0.2
+vim.g.neovide_transparency = 0.9
 
