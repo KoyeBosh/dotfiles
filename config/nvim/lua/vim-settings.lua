@@ -65,5 +65,5 @@ vim.g.neovide_cursor_animation_length = 0.04
 vim.g.neovide_cursor_unfocused_outline_width = 0.08
 vim.g.neovide_floating_shadow = true
 vim.g.neovide_scroll_animation_length = 0.2
-vim.g.neovide_transparency = 0.9
+vim.g.neovide_transparency = 0.98
 
