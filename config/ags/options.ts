@@ -147,8 +147,8 @@ const options = mkOptions(OPTIONS, {
             [
                 "firefox",
                 "org.gnome.Nautilus",
-                "org.gnome.Calendar",
-                "obsidian",
+                // "org.gnome.Calendar",
+                // "obsidian",
                 "discord",
                 "spotify",
             ],
@@ -167,7 +167,7 @@ const options = mkOptions(OPTIONS, {
         logout: opt("pkill Hyprland"),
         shutdown: opt("shutdown now"),
         layout: opt<"line" | "box">("line"),
-        labels: opt(true),
+        labels: opt(false),
     },
 
     quicksettings: {
