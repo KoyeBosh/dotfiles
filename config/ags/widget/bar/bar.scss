@@ -68,7 +68,7 @@ $button-radius: $radius;
             &.active {
                 // background-color: $primary-bg;
                 background-image: $active-gradient;
-                min-width: 20pt;
+                min-width: 18pt;
                 min-height: 12pt;
             }
         }
@@ -96,8 +96,8 @@ $button-radius: $radius;
     .taskbar .indicator.active {
         background-color: $primary-bg;
         border-radius: $radius;
-        min-height: 4pt;
-        min-width: 6pt;
+        min-height: 2pt;
+        min-width: 8pt;
         margin: 2pt;
     }
 
