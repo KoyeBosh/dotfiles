@@ -1,0 +1,6 @@
+#!/bin/zsh
+
+# Rust path
+export PATH="$HOME/.cargo/bin:$PATH"
+
+exec Hyprland

@@ -21,13 +21,10 @@ compinit
 
 source /usr/share/zsh/plugins/fzf-tab-bin-git/fzf-tab.zsh
 source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
-#source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 source $HOME/.aliases.sh
-
-# Rust path
-export PATH="$HOME/.cargo/bin:$PATH"
 
 # To customize prompt, run `p10k configure` or edit ~/.dotfiles/p10k.zsh.
 [[ ! -f ~/.dotfiles/p10k.zsh ]] || source ~/.dotfiles/p10k.zsh
