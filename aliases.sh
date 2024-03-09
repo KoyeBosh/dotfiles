@@ -13,4 +13,5 @@ alias svim='sudoedit'
 alias man='batman'
 alias nf='neofetch'
 alias mrun="mvn compile && mvn exec:java"
+alias fw="systemctl reboot --firmware-setup"
 
