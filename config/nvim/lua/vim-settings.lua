@@ -46,7 +46,7 @@ vim.keymap.set("v", ">", ">gv", opts)
 -- Don't re-yank what I'm pasting over
 vim.keymap.set("v", "p", '"*dP', opts)
 
-vim.opt.wrap = true
+vim.opt.wrap = false
 vim.opt.scrolloff = 8
 
 vim.opt.incsearch = true
