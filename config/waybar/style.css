@@ -89,7 +89,7 @@ button:hover {
     background: rgba(0, 0, 0, 0.2);
 }
 
-#workspaces button.focused {
+#workspaces button.active {
     background-color: @high;
     font-weight: 900;
     color: @text-dark;
