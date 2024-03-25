@@ -45,9 +45,6 @@ return {
 		require 'lspconfig'.clangd.setup {
 			capabilities = capabilities,
 		}
-		require 'lspconfig'.texlab.setup{
-			capabilities = capabilities
-		}
 
 		-- Global mappings.
 		-- See `:help vim.diagnostic.*` for documentation on any of the below functions
