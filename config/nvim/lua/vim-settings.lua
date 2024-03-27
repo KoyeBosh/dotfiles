@@ -26,9 +26,9 @@ vim.opt.cursorline = true
 vim.opt.fillchars = {eob = " "}
 
 -- Tabs and spacing
-vim.opt.tabstop = 4
-vim.opt.softtabstop = 4
-vim.opt.shiftwidth = 4
+vim.opt.tabstop = 2
+vim.opt.softtabstop = 0
+vim.opt.shiftwidth = 2
 vim.opt.smartindent = true
 vim.opt.textwidth = 80
 vim.opt.formatoptions = "roqwnc"
@@ -65,5 +65,5 @@ vim.g.neovide_cursor_animation_length = 0.04
 vim.g.neovide_cursor_unfocused_outline_width = 0.08
 vim.g.neovide_floating_shadow = true
 vim.g.neovide_scroll_animation_length = 0.2
-vim.g.neovide_transparency = 0.9
+-- vim.g.neovide_transparency = 0.9
 
