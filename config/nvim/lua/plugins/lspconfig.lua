@@ -43,7 +43,10 @@ return {
 			capabilities = capabilities
 		}
 		require 'lspconfig'.clangd.setup {
-			capabilities = capabilities,
+			capabilities = capabilities
+		}
+		require 'lspconfig'.nil_ls.setup {
+			capabilities = capabilities
 		}
 
 		-- Global mappings.
